@@ -32,14 +32,14 @@ Win11 家庭版，Android Studio (2025.1.3)，Android Emulator (Nexus S API 23)
 
 2. 准备资源与数据
 
-    * 将动物图片（cat.png、dog.jpeg 等）放入 `res/drawable` 目录；
+   * 将动物图片（cat.png、dog.jpeg 等）放入 `res/drawable` 目录；
 
-    - 在 `ListActivity.java` 中定义动物名称数组（Lion、Tiger 等）与对应图片资源 ID 数组。
+   - 在 `ListActivity.java` 中定义动物名称数组（Lion、Tiger 等）与对应图片资源 ID 数组。
 
 3. 绑定适配器与交互构建 `List<Map<String, Object>>` 数据源，存储每个列表项的图片与文字数据；
 
-    - 创建 SimpleAdapter，关联数据源、列表项布局与控件 ID；
-    - 为 ListView 设置 `setOnItemClickListener`，点击时通过 Toast 显示选中的动物名称。
+   - 创建 SimpleAdapter，关联数据源、列表项布局与控件 ID；
+   - 为 ListView 设置 `setOnItemClickListener`，点击时通过 Toast 显示选中的动物名称。
 
 ### （二）自定义布局 AlertDialog 实现
 
@@ -47,27 +47,27 @@ Win11 家庭版，Android Studio (2025.1.3)，Android Emulator (Nexus S API 23)
 
 2. 构建对话框逻辑：
 
-    * 在 `AlertDialogTestActivity.java` 中，通过 `LayoutInflater` 加载自定义布局；
+   * 在 `AlertDialogTestActivity.java` 中，通过 `LayoutInflater` 加载自定义布局；
 
-    - 创建 `AlertDialog.Builder` 对象，调用 `setView()` 方法将自定义布局添加到对话框；
-    - 为对话框内的 Cancel 按钮设置 “关闭对话框” 逻辑，为 Sign in 按钮设置 “获取输入内容并弹 Toast 提示” 逻辑。
+   - 创建 `AlertDialog.Builder` 对象，调用 `setView()` 方法将自定义布局添加到对话框；
+   - 为对话框内的 Cancel 按钮设置 “关闭对话框” 逻辑，为 Sign in 按钮设置 “获取输入内容并弹 Toast 提示” 逻辑。
 
 ### （三）XML 定义菜单实现
 
 1. 创建菜单 XML 文件：
-    * 在 `res` 下新建 `menu` 目录，创建 `menu_text_setting.xml`，定义 “字体大小” 子菜单（小 / 中 / 大）、“普通菜单项”、“字体颜色” 子菜单（红色 / 黑色），设置 `app:showAsAction="never"` 使其在溢出菜单中显示。
+   * 在 `res` 下新建 `menu` 目录，创建 `menu_text_setting.xml`，定义 “字体大小” 子菜单（小 / 中 / 大）、“普通菜单项”、“字体颜色” 子菜单（红色 / 黑色），设置 `app:showAsAction="never"` 使其在溢出菜单中显示。
 2. 加载菜单与处理交互
-    - 在 `MenuActivity.java` 中重写 `onCreateOptionsMenu()`，通过 `getMenuInflater().inflate()` 加载 XML 菜单；
-    - 重写 `onOptionsItemSelected()`，根据菜单项 ID 实现逻辑：点击字体大小选项修改测试文本字号，点击普通菜单项弹 Toast，点击字体颜色选项修改文本颜色。
+   - 在 `MenuActivity.java` 中重写 `onCreateOptionsMenu()`，通过 `getMenuInflater().inflate()` 加载 XML 菜单；
+   - 重写 `onOptionsItemSelected()`，根据菜单项 ID 实现逻辑：点击字体大小选项修改测试文本字号，点击普通菜单项弹 Toast，点击字体颜色选项修改文本颜色。
 
 ### （四）ActionMode 上下文菜单实现
 
 1. 创建布局与菜单
-    - 在 `res/layout` 下新建 `activity_action_mode.xml`（添加 ListView）与 `item_list_action_mode.xml`（列表项文本布局）；
-    - 在 `res/menu` 下新建 `menu_action_mode_context.xml`，定义 “删除” 菜单项。
+   - 在 `res/layout` 下新建 `activity_action_mode.xml`（添加 ListView）与 `item_list_action_mode.xml`（列表项文本布局）；
+   - 在 `res/menu` 下新建 `menu_action_mode_context.xml`，定义 “删除” 菜单项。
 2. 实现上下文菜单逻辑
-    - 在 `ActionModeActivity.java` 中，为 ListView 设置 `setOnItemLongClickListener`，长按触发 ActionMode；
-    - 实现 `ActionMode.Callback` 接口，在 `onCreateActionMode()` 中加载上下文菜单、设置标题 “1 selected”，在 `onActionItemClicked()` 中实现选中项删除逻辑，在 `onDestroyActionMode()` 中重置选中状态。
+   - 在 `ActionModeActivity.java` 中，为 ListView 设置 `setOnItemLongClickListener`，长按触发 ActionMode；
+   - 实现 `ActionMode.Callback` 接口，在 `onCreateActionMode()` 中加载上下文菜单、设置标题 “1 selected”，在 `onActionItemClicked()` 中实现选中项删除逻辑，在 `onDestroyActionMode()` 中重置选中状态。
 
 ## 五、实验结果
 
