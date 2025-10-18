@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 根菜单标签 -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 1. 字体大小子菜单（文档要求：小、中、大，对应10/16/20号字） -->
+    <item
+        android:id="@+id/item_text_size"
+        android:title="@string/font_size"
+        app:showAsAction="never"> <!-- 永远在溢出菜单中显示（点击顶部菜单按钮展开） -->
+        <!-- 子菜单：包含三个字号选项 -->
+        <menu>
+            <item android:id="@+id/size_small" android:title="@string/font_small"/>
+            <item android:id="@+id/size_medium" android:title="@string/font_m16"/>
+            <item android:id="@+id/size_large" android:title="@string/font_large20"/>
+        </menu>
+    </item>
+
+    <!-- 2. 普通菜单项（文档要求：点击弹出Toast） -->
+    <item
+        android:id="@+id/item_normal"
+        android:title="@string/menu_item"
+        app:showAsAction="never"/>
+
+    <!-- 3. 字体颜色子菜单（文档要求：红色、黑色） -->
+    <item
+        android:id="@+id/item_text_color"
+        android:title="@string/font_color"
+        app:showAsAction="never">
+        <!-- 子菜单：包含两个颜色选项 -->
+        <menu>
+            <item android:id="@+id/color_red" android:title="@string/red"/>
+            <item android:id="@+id/color_black" android:title="@string/black"/>
+        </menu>
+    </item>
+
+</menu>

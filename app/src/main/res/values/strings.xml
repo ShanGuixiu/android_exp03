@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">exp_03</string>
+    <string name="animal">动物图片控件</string>
+    <string name="android_app">ANDROID APP</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="cancel">Cancel</string>
+    <string name="sign_in">Sign in</string>
+    <string name="login_alarm_dialog">显示自定义登录对话框</string>
+    <string name="task1">任务一</string>
+    <string name="task2">任务二</string>
+    <string name="font_size">字体大小</string>
+    <string name="font_small">小（10号）</string>
+    <string name="font_m16">中（16号）</string>
+    <string name="font_large20">大（20号）</string>
+    <string name="menu_item">普通菜单项</string>
+    <string name="font_color">字体颜色</string>
+    <string name="red">红色</string>
+    <string name="black">黑色</string>
+    <string name="test_content">用于测试的内容</string>
+    <string name="menu_test">MenuTest</string>
+    <string name="task3">任务三</string>
+    <string name="delete">删除</string>
+    <string name="task4">任务四</string>
+</resources>
