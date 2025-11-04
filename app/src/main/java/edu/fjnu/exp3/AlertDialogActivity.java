@@ -15,7 +15,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class AlertDialogActivity extends AppCompatActivity {
-    private Button btnShowCustomDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +26,7 @@ public class AlertDialogActivity extends AppCompatActivity {
             return insets;
         });
         // 初始化“显示对话框”按钮
-        btnShowCustomDialog = findViewById(R.id.btn_show_custom_dialog);
+        Button btnShowCustomDialog = findViewById(R.id.btn_show_custom_dialog);
         btnShowCustomDialog.setOnClickListener(v -> showCustomLoginDialog());
     }
 

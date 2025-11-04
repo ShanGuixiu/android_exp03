@@ -34,9 +34,8 @@ public class MenuActivity extends AppCompatActivity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // 加载res/menu/menu_text_setting.xml定义的菜单
         getMenuInflater().inflate(R.menu.menu_text_setting, menu);
-        return true; // 返回true表示显示菜单
+        return true;
     }
 
     /**

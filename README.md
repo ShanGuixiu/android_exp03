@@ -40,6 +40,7 @@ Win11 家庭版，Android Studio (2025.1.3)，Android Emulator (Nexus S API 23)
 
    - 创建 SimpleAdapter，关联数据源、列表项布局与控件 ID；
    - 为 ListView 设置 `setOnItemClickListener`，点击时通过 Toast 显示选中的动物名称。
+   - 同时发送Notification
 
 ### （二）自定义布局 AlertDialog 实现
 

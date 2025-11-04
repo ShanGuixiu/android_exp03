@@ -25,7 +25,7 @@ public class ActionModeActivity extends AppCompatActivity {
 
     private ActionMode mActionMode; // ActionMode实例，用于控制上下文菜单显示/隐藏
     private int mSelectedPosition = -1; // 记录选中的列表项位置（-1表示无选中）
-    private List<String> mListData; // 列表数据源（匹配文档中“One、Two、Three”等）
+    private List<String> mListData; // 列表数据源
     private CustomListAdapter mAdapter; // ListView自定义适配器
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class ActionModeActivity extends AppCompatActivity {
         // 1. 初始化ListView
         ListView lvActionModeList = findViewById(R.id.lv_action_mode_list);
 
-        // 2. 准备列表数据源（文档示例数据：One、Two、Three、Four、Five）
+        // 2. 准备列表数据源
         mListData = new ArrayList<>();
         mListData.add("One");
         mListData.add("Two");
@@ -53,7 +53,7 @@ public class ActionModeActivity extends AppCompatActivity {
         mAdapter = new CustomListAdapter();
         lvActionModeList.setAdapter(mAdapter);
 
-        // 4. 为ListView列表项设置长按事件：触发ActionMode上下文菜单（文档核心要求）
+        // 4. 为ListView列表项设置长按事件：触发ActionMode上下文菜单
         lvActionModeList.setOnItemLongClickListener((parent, view, position, id) -> {
             // 若ActionMode未开启，启动上下文菜单
             if (mActionMode == null) {
@@ -80,13 +80,13 @@ public class ActionModeActivity extends AppCompatActivity {
             return true; // 返回true表示显示菜单
         }
 
-        // 2. 菜单准备显示时调用（可更新菜单状态，此处暂无需处理）
+        // 2. 菜单准备显示时调用
         @Override
         public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
             return false;
         }
 
-        // 3. 上下文菜单项点击事件（如“删除”按钮）
+        // 3. 上下文菜单项点击事件（
         @Override
         public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
             // 处理“删除”选项点击
