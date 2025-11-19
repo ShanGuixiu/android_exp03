@@ -26,6 +26,10 @@ Win11 家庭版，Android Studio (2025.1.3)，Android Emulator (Nexus S API 23)
 
 ## 四、实验步骤
 
+主界面配置按钮快速抵达：
+
+![image-20251119104913341](README.assets/image-20251119104913341.png)
+
 ### （一）ListView + SimpleAdapter + Toast 实现
 
 1. 创建布局文件
@@ -42,6 +46,12 @@ Win11 家庭版，Android Studio (2025.1.3)，Android Emulator (Nexus S API 23)
    - 为 ListView 设置 `setOnItemClickListener`，点击时通过 Toast 显示选中的动物名称。
    - 同时发送Notification
 
+![image-20251119104943077](README.assets/image-20251119104943077.png)
+
+![image-20251119104951521](README.assets/image-20251119104951521.png)
+
+![image-20251119105015697](README.assets/image-20251119105015697.png)
+
 ### （二）自定义布局 AlertDialog 实现
 
 1. 设计自定义对话框布局：在 `res/layout` 下新建 `alarm_dialog.xml`，添加 TextView（标题 “ANDROID APP”）、两个 EditText（用户名、密码）、两个 Button（Cancel、Sign in）。
@@ -53,6 +63,12 @@ Win11 家庭版，Android Studio (2025.1.3)，Android Emulator (Nexus S API 23)
    - 创建 `AlertDialog.Builder` 对象，调用 `setView()` 方法将自定义布局添加到对话框；
    - 为对话框内的 Cancel 按钮设置 “关闭对话框” 逻辑，为 Sign in 按钮设置 “获取输入内容并弹 Toast 提示” 逻辑。
 
+![image-20251119105040551](README.assets/image-20251119105040551.png)
+
+
+
+![image-20251119105031274](README.assets/image-20251119105031274.png)
+
 ### （三）XML 定义菜单实现
 
 1. 创建菜单 XML 文件：
@@ -60,6 +76,12 @@ Win11 家庭版，Android Studio (2025.1.3)，Android Emulator (Nexus S API 23)
 2. 加载菜单与处理交互
    - 在 `MenuActivity.java` 中重写 `onCreateOptionsMenu()`，通过 `getMenuInflater().inflate()` 加载 XML 菜单；
    - 重写 `onOptionsItemSelected()`，根据菜单项 ID 实现逻辑：点击字体大小选项修改测试文本字号，点击普通菜单项弹 Toast，点击字体颜色选项修改文本颜色。
+
+![image-20251119105103290](README.assets/image-20251119105103290.png)
+
+修改字体大小和颜色
+
+![image-20251119105125475](README.assets/image-20251119105125475.png)
 
 ### （四）ActionMode 上下文菜单实现
 
@@ -69,6 +91,10 @@ Win11 家庭版，Android Studio (2025.1.3)，Android Emulator (Nexus S API 23)
 2. 实现上下文菜单逻辑
    - 在 `ActionModeActivity.java` 中，为 ListView 设置 `setOnItemLongClickListener`，长按触发 ActionMode；
    - 实现 `ActionMode.Callback` 接口，在 `onCreateActionMode()` 中加载上下文菜单、设置标题 “1 selected”，在 `onActionItemClicked()` 中实现选中项删除逻辑，在 `onDestroyActionMode()` 中重置选中状态。
+
+![image-20251119105147141](README.assets/image-20251119105147141.png)
+
+![image-20251119105154168](README.assets/image-20251119105154168.png)
 
 ## 五、实验结果
 
